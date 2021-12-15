@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Abel', sans-serif;
+   
+}
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+img {
+    max-width:100%;
+    max-height:100%;
+}
+
+a {
+    color: #ebe9e8;
+  }
+
+   /* unvisited link */
+a:link {
+    color: #ebe9e8;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: #ebe9e8;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    
+  }
+  
+  /* selected link */
+  a:active {
+    color: #ffffff;
+    text-decoration: underline;
+  } 
+
+body {
+    margin: 0;
+    background-color:#ebe9e8;
+}
+
+
+
+.h1 {
+    font-size: small;
+}
+
+/* Sets up the grid. vh = max viewable height */
+.container {        
+    width: 1200px;
+    height: 100vh;
+    margin: auto;
+
+    font-weight: bold;
+    font-size: 20px;
+
+    display: grid;
+
+    /* 12 column lines, with each column 1 fraction of the total space. */
+    /* These resize when window size is changed. 12 row lines, first row and last row are fixed sized, these do not change in size when window size is changed, or user has a smaller browser. */
+    /* grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 100px 20px repeat(8, 1fr) 10px 20px; */
+
+    grid-template-columns: repeat(12, 100px);
+    grid-template-rows: 100px 30px repeat(8, 100px) 1px 50px;
+
+    gap: 4px;
+
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Sets up individual divs in the grid. */
+.cointainer div {
+    padding: 0px;
+    margin: 0px;
+    
+    
+}
+
+/* header starts at grid column line 1, and ends at grid column line 13. */
+.header {
+    grid-column: 1 / 13;
+    grid-row: 1;
+    background-color: #557A95;
+    border-style:ridge;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 0px;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-left: 100px;
+    color: #f5f4f3;
+
+    
+}
+
+.nav {
+    grid-column: 7 / 12;
+    grid-row: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25px;
+    color: #f5f4f3;
+    margin-top: 40px;
+
+}
+
+
+.title {
+    grid-column: 1 / 13;
+    grid-row: 2;
+    background-color: #7395AE;
+    border-style:ridge;
+    border-width: 2px;
+    border-color: #000000;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 23px;
+    padding-left: 187px;
+    padding-top: 0px;
+    padding-bottom: 7px;
+    color: #f5f4f3;
+
+
+    
+}
+
+.image-1 {
+    grid-column: 1 / 7;
+    grid-row: 3 / 7;
+
+    /* -animation: fadeIn linear 0.3s;
+    -webkit-animation: fadeIn linear 0.3s;
+    -moz-animation: fadeIn linear 0.3s;
+    -o-animation: fadeIn linear 0.3s;
+    -ms-animation: fadeIn linear 0.3s; */
+}
+
+.text-1 {
+    grid-column: 7 / 13;
+    grid-row: 3 / 7;
+
+    border-style:ridge;
+    border-width: 3px;
+    border-color: #7395AE;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+
+    /* -animation: fadeIn linear 0.3s;
+    -webkit-animation: fadeIn linear 0.3s;
+    -moz-animation: fadeIn linear 0.3s;
+    -o-animation: fadeIn linear 0.3s;
+    -ms-animation: fadeIn linear 0.3s; */
+   
+}
+
+
+.image-2 {
+    grid-column: 7 / 13;
+    grid-row: 7 / 11;
+
+    /* -animation: fadeIn linear 0.3s;
+    -webkit-animation: fadeIn linear 0.3s;
+    -moz-animation: fadeIn linear 0.3s;
+    -o-animation: fadeIn linear 0.3s;
+    -ms-animation: fadeIn linear 0.3s; */
+}
+
+.text-2 {
+    grid-column: 1 / 7;
+    grid-row: 7 / 11;
+    border-style:ridge;
+    border-width: 3px;
+    border-color: #7395AE;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    text-align: justify;
+
+    /* -animation: fadeIn linear 0.3s;
+    -webkit-animation: fadeIn linear 0.3s;
+    -moz-animation: fadeIn linear 0.3s;
+    -o-animation: fadeIn linear 0.3s;
+    -ms-animation: fadeIn linear 0.3s; */
+    
+}
+
+.footer {
+    grid-column: 1 / 13;
+    grid-row: 12 / 12;
+    background-color: #7395AE;
+    border-style:ridge;
+    border-width: 2px;
+    border-color: #000000;
+    font-size: 15px;
+    font-size: 15px;
+    padding-left: 250px;
+    padding-top: 1px;
+    color: #f5f4f3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
